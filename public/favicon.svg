@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Obsidian Background Gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B" />
+      <stop offset="50%" stop-color="#09090B" />
+      <stop offset="100%" stop-color="#040405" />
+    </linearGradient>
+
+    <!-- Glowing Champagne Gold Border Gradient -->
+    <linearGradient id="border-stroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FDE68A" />
+      <stop offset="35%" stop-color="#F59E0B" />
+      <stop offset="70%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+
+    <!-- Play Button / Cinema Gold Gradient -->
+    <linearGradient id="play-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FBBF24" />
+      <stop offset="50%" stop-color="#F59E0B" />
+      <stop offset="100%" stop-color="#B45309" />
+    </linearGradient>
+
+    <!-- Star Core Gradient -->
+    <linearGradient id="spark-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="40%" stop-color="#FEF3C7" />
+      <stop offset="100%" stop-color="#FDE68A" />
+    </linearGradient>
+
+    <!-- Warm Amber Highlight -->
+    <linearGradient id="gold-glow" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+
+    <!-- Ambient Core Glow -->
+    <radialGradient id="center-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F59E0B" stop-opacity="0.4" />
+      <stop offset="50%" stop-color="#D97706" stop-opacity="0.12" />
+      <stop offset="100%" stop-color="#09090B" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Drop Shadow / Glow Filters -->
+    <filter id="play-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="16" flood-color="#F59E0B" flood-opacity="0.5" />
+    </filter>
+    
+    <filter id="sparkle-glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="0" stdDeviation="12" flood-color="#FBBF24" flood-opacity="0.8" />
+    </filter>
+  </defs>
+
+  <!-- Base Squircle Container -->
+  <rect x="24" y="24" width="464" height="464" rx="116" fill="url(#bg)" stroke="url(#border-stroke)" stroke-width="12" />
+
+  <!-- Center Ambient Radial Halo -->
+  <circle cx="256" cy="256" r="190" fill="url(#center-glow)" />
+
+  <!-- Outer Orbital Arc ("C" of Creative Intelligence / Masterclass Loop) -->
+  <path d="M 180 115 A 165 165 0 1 0 395 330" fill="none" stroke="url(#gold-glow)" stroke-width="12" stroke-linecap="round" stroke-dasharray="24 16" opacity="0.4" />
+  
+  <!-- Orbit Connection Nodes -->
+  <circle cx="180" cy="115" r="8" fill="#FDE68A" />
+  <circle cx="91" cy="256" r="6" fill="#FBBF24" opacity="0.85" />
+  <circle cx="395" cy="330" r="8" fill="#F59E0B" />
+
+  <!-- CENTER SYMBOL: Unified Faceted Play Button + Glowing AI Sparkle -->
+  <g transform="translate(256, 256)">
+    <!-- Video Play Button Base -->
+    <path d="M -75 -105 C -75 -118, -60 -125, -48 -118 L 122 -12 C 134 -5, 134 5, 122 12 L -48 118 C -60 125, -75 118, -75 105 Z"
+          fill="url(#play-grad)" 
+          stroke="url(#border-stroke)" 
+          stroke-width="8" 
+          filter="url(#play-shadow)" />
+
+    <!-- Top facet highlight on Play Button -->
+    <path d="M -75 -105 C -75 -118, -60 -125, -48 -118 L 122 -12 C 128 -8, 131 -4, 131 0 L -75 0 Z" 
+          fill="#FFFFFF" 
+          opacity="0.18" />
+
+    <!-- AI Sparkle Core (✦) overlaying the Play Button Center -->
+    <g transform="translate(-5, 0)" filter="url(#sparkle-glow)">
+      <!-- Outer Glow Halo of Star -->
+      <path d="M 0 -88 C 0 -28, 28 0, 88 0 C 28 0, 0 28, 0 88 C 0 28, -28 0, -88 0 C -28 0, 0 -28, 0 -88 Z" 
+            fill="url(#gold-glow)" 
+            opacity="0.4" />
+
+      <!-- Crisp White/Gold Diamond Star (✦) -->
+      <path d="M 0 -68 C 0 -22, 22 0, 68 0 C 22 0, 0 22, 0 68 C 0 22, -22 0, -68 0 C -22 0, 0 -22, 0 -68 Z" 
+            fill="url(#spark-grad)" />
+
+      <!-- Center Intelligent Core Node -->
+      <circle cx="0" cy="0" r="10" fill="#F59E0B" stroke="#FFFFFF" stroke-width="3" />
+    </g>
+  </g>
+
+  <!-- Top-Right Accent Spark (Mini 4-point star) -->
+  <path d="M 380 125 C 380 143, 372 151, 354 151 C 372 151, 380 159, 380 177 C 380 159, 388 151, 406 151 C 388 151, 380 143, 380 125 Z" fill="#FDE68A" />
+
+  <!-- Bottom-Left Accent Spark (Micro 4-point star) -->
+  <path d="M 125 365 C 125 377, 119 383, 107 383 C 119 383, 125 389, 125 401 C 125 389, 131 383, 143 383 C 131 383, 125 377, 125 365 Z" fill="#FBBF24" opacity="0.8" />
+</svg>

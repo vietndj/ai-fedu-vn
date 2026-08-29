@@ -1,0 +1,26 @@
+{
+  "name": "ci-fedu-vn",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npx vite@7.3.2 --config vite.config.ts --host 0.0.0.0",
+    "build": "npx vite@7.3.2 build --config vite.config.ts",
+    "serve": "npx vite@7.3.2 preview --config vite.config.ts --host 0.0.0.0",
+    "typecheck": "tsc -p tsconfig.json --noEmit"
+  },
+  "dependencies": {
+    "@vercel/node": "^5.8.23",
+    "@vitejs/plugin-react": "^5.0.4",
+    "dotenv": "^17.4.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "vite": "^7.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^25.3.3",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^7.0.2"
+  }
+}

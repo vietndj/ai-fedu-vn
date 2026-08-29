@@ -1,0 +1,51 @@
+// ─── Unified SVG Icon System ─────────────────────────────────────
+const ICON_CSS = `
+@keyframes ic-float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes ic-pulse{0%,100%{opacity:.5;transform:scale(.88)}50%{opacity:1;transform:scale(1)}}
+@keyframes ic-scan{0%,100%{transform:translateY(-9px)}50%{transform:translateY(9px)}}
+`;
+let _icCssInjected = false;
+function injectIconKf() {
+  if (_icCssInjected) return; _icCssInjected = true;
+  const s = document.createElement("style"); s.textContent = ICON_CSS; document.head.appendChild(s);
+}
+
+function IcBox({ size = 40, float: fl = true, pulse = false, children }: {
+  size?: number; float?: boolean; pulse?: boolean; children: React.ReactNode;
+}) {
+  injectIconKf();
+  const anim = pulse
+    ? "ic-pulse 2.6s ease-in-out infinite"
+    : fl ? "ic-float 3.2s ease-in-out infinite"
+    : "none";
+  return (
+    <svg width={size} height={size} viewBox="0 0 40 40" fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ animation: anim, display: "block", overflow: "visible" }}>
+      {children}
+    </svg>
+  );
+}
+
+function IconBook({ accent: c }: { accent: string }) {
+  return (
+    <IcBox>
+      <line x1="20" y1="8" x2="20" y2="34" stroke={c} strokeWidth="2" strokeLinecap="round"/>
+      <path d="M20 10 C14 10 8 12 8 15 L8 34 C8 31 14 29 20 29 Z" fill={`${c}18`} stroke={c} strokeWidth="1.8" strokeLinejoin="round"/>
+      <path d="M20 10 C26 10 32 12 32 15 L32 34 C32 31 26 29 20 29 Z" fill={`${c}0d`} stroke={`${c}99`} strokeWidth="1.8" strokeLinejoin="round"/>
+      <line x1="11" y1="17" x2="18" y2="16.5" stroke={`${c}88`} strokeWidth="1.5" strokeLinecap="round"/>
+      <line x1="11" y1="20.5" x2="18" y2="20" stroke={`${c}66`} strokeWidth="1.5" strokeLinecap="round"/>
+      <line x1="11" y1="24" x2="17" y2="23.5" stroke={`${c}44`} strokeWidth="1.5" strokeLinecap="round"/>
+      <circle cx="20" cy="8" r="2" fill={c} style={{ filter: `drop-shadow(0 0 4px ${c})` }}/>
+    </IcBox>
+  );
+}
+
+function IconVideo({ accent: c }: { accent: string }) {
+  return (
+    <IcBox>
+      <rect x="4" y="7" width="32" height="22" rx="3" stroke={c} strokeWidth="1.8" fill={`${c}10`}/>
+      <line x1="20" y1="29" x2="20" y2="35" stroke={`${c}88`} strokeWidth="2" strokeLinecap="round"/>
+      <line x1="14" y1="35" x2="26" y2="35" stroke={`${c}88`} strokeWidth="2" strokeLinecap="round"/>
+      <polygon points="16,13 16,25 28,19" fill={c} style={{ filter: `drop-shadow(0 0 5px ${c})` }}/>
+      <circle cx="32" cy="10" r="1.5" fill={`${c}66`}/>

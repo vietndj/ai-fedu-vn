@@ -1,0 +1,183 @@
+/* ─── Noe Display ─── */
+@font-face {
+  font-family: 'Noe Display';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-NoeDisplay-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noe Display';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-NoeDisplay-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Noe Display';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-NoeDisplay-Black.ttf') format('truetype');
+}
+
+/* ─── GT Sectra Display ─── */
+@font-face {
+  font-family: 'GT Sectra';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GT-Sectra-LCGV-Display-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GT Sectra';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GT-Sectra-LCGV-Display-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GT Sectra';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GT-Sectra-LCGV-Display-Medium.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GT Sectra';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GT-Sectra-LCGV-Display-Bold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'GT Sectra';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/GT-Sectra-LCGV-Display-Super.otf') format('opentype');
+}
+
+/* ─── Aeonik ─── */
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-AEONIK-REGULAR.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/SVN-AEONIK-REGULARITALIC.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-AEONIK-MEDIUM.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/SVN-AEONIK-MEDIUMITALIC.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-AEONIK-BOLD.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/SVN-AEONIK-BOLDITALIC.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'Aeonik';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-AEONIK-BLACK.TTF') format('truetype');
+}
+
+/* ─── SVN-Acta ─── */
+@font-face {
+  font-family: 'Acta';
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-LightItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-Book.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-BookItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-BoldItalic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Acta';
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+  src: url('/fonts/SVN-Acta-Black.ttf') format('truetype');
+}
+
