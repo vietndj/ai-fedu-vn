@@ -267,7 +267,7 @@ export const DEFAULT_CONTENT: PageContent = {
   cycleLabel: "LỘ TRÌNH THĂNG CẤP GAME (GAMIFICATION)",
   cycleHeading: "3 Cấp Độ Mở Khóa Năng Lực Trả Thưởng Tức Thì:",
   cycleSteps: [
-    { n: "Level 1", title: "Căn Cước AI & Drive (3 Phút)", desc: "Nạp 3 ảnh mỏ neo ➔ Nhận ngay bản sao số Visual Twin + Kết nối Drive upload 1 chạm." },
+    { n: "Level 1", title: "Tạo Ảnh Cá Nhân Hoá & Drive (3 Phút)", desc: "Nạp 3 ảnh mỏ neo ➔ Nhận ngay bản sao số Visual Twin + Kết nối Drive upload 1 chạm." },
     { n: "Level 2", title: "Kịch Bản Viral & Đăng Bài (10 Phút)", desc: "Bóc sự thật 3 tầng + Bóc văn mẫu AI + Lên lịch tự động đăng Fanpage chuẩn giờ vàng." },
     { n: "Level 3", title: "Cỗ Máy Bán Hàng & Telegram Remote", desc: "Dựng web bán hàng VietQR trong 30 giây + Biến điện thoại thành Remote điều khiển cả hệ thống." }
   ],
