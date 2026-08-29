@@ -59,7 +59,8 @@ export function HeroSection() {
           {(c as any).heroPoem && (c as any).heroPoem.length > 0 && (
             <div style={{
               margin: "0 auto 24px",
-              maxWidth: 480,
+              maxWidth: 580,
+              width: "100%",
               background: "rgba(255, 255, 255, 0.01)",
               border: `1px dashed ${t.accent}33`,
               borderRadius: 16,
@@ -70,12 +71,12 @@ export function HeroSection() {
             }}>
               <span style={{ position: "absolute", top: 4, left: 16, fontSize: 36, fontFamily: "Georgia, serif", color: `${t.accent}33`, lineHeight: 1, userSelect: "none" }}>“</span>
               <div style={{
-                fontFamily: t.fontDisplay, fontSize: "clamp(16px, 2.2vw, 20px)", fontStyle: "italic",
+                fontFamily: t.fontDisplay, fontSize: "clamp(15px, 2vw, 19px)", fontStyle: "italic",
                 fontWeight: 600, color: "var(--cl-accent)", lineHeight: 1.6, textAlign: "center",
-                display: "flex", flexDirection: "column", gap: 5, position: "relative", zIndex: 2,
+                display: "flex", flexDirection: "column", gap: 6, position: "relative", zIndex: 2,
               }}>
                 {(c as any).heroPoem.map((line: string, i: number) => (
-                  <span key={i}>{line}</span>
+                  <span key={i} style={{ textWrap: "balance" }}>{line}</span>
                 ))}
               </div>
               <span style={{ position: "absolute", bottom: -16, right: 16, fontSize: 36, fontFamily: "Georgia, serif", color: `${t.accent}33`, lineHeight: 1, userSelect: "none" }}>”</span>

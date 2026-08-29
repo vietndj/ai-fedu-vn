@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const PROOFS = [
-  "Anh Hoàng Nam (Hà Nội) vừa kích hoạt Antigravity Pro thành công ⚡",
+  "Anh Hoàng Nam (Hà Nội) vừa kích hoạt Hệ thống AI Agent thành công ⚡",
   "Chị Thu Thảo (HCM) vừa cài đặt Visual Twin Face DNA chính chủ 👤",
   "Anh Quang Dũng (Đà Nẵng) vừa tạo web bán hàng 1-Shot VietQR 💳",
   "Anh Tuấn Anh (Hải Phòng) vừa kết nối Telegram Remote 2 chiều 🤖",

@@ -185,13 +185,13 @@ export const DEFAULT_CONTENT: PageContent = {
 
   heroBadge: "⚡ VŨ KHÍ COMPUTER USE • BƯỚC NHẢY VỌT TỪ CHATBOT SANG NHÂN SỰ SỐ",
   heroHeadline1: "ĐỪNG LÀM CU-LI CHO CHATGPT NỮA.",
-  heroHeadline2: "Sở Hữu Hệ Điều Hành Doanh Nghiệp 1 Người Với Antigravity Pro.",
+  heroHeadline2: "Sở Hữu Hệ Điều Hành Doanh Nghiệp 1 Người Bằng AI Agent Thao Tác Máy Tính.",
   heroPoem: [
-    "Khóa Face DNA mang 100% khuôn mặt và giọng văn chính chủ",
-    "Tạo Web bán hàng 30s có mã VietQR nổ tiền về tài khoản",
-    "Điều khiển máy tính từ xa qua Telegram • Tự động hóa ổ cứng & Drive"
+    "Khóa Face DNA: 100% Khuôn Mặt & Giọng Văn Riêng",
+    "Web Bán Hàng 30s: Quét Mã VietQR Tiền Về Ngay",
+    "Thao Tác Máy Tính: Tự Động Hóa & Báo Telegram"
   ],
-  heroAccentLine: "ChatGPT chỉ biết nói lý thuyết. Antigravity có tay chân để làm xong 100% từ A đến Z.",
+  heroAccentLine: "ChatGPT chỉ biết nói lý thuyết. Thế hệ AI Agent mới có tay chân để làm xong 100% từ A đến Z.",
   heroSub: "Dành riêng cho những người đang dùng ChatGPT hàng ngày nhưng kiệt sức vì phải tự copy-paste, tự làm web, tự ghép ảnh. Nâng cấp toàn diện thành Kiến Trúc Sư điều hành cỗ máy tự động hóa trên chính máy tính của bạn.",
   
   philosophyAssets: [
@@ -217,7 +217,7 @@ export const DEFAULT_CONTENT: PageContent = {
       desc: "Toàn quyền thao tác ổ cứng, tự nén 1080p, đẩy Drive và điều khiển máy tính từ xa qua Telegram Bot.",
     }
   ],
-  heroCta: "SỞ HỮU GÓI ANTIGRAVITY PRO (10.000đ) →",
+  heroCta: "SỞ HỮU HỆ THỐNG AI AGENT (10.000đ) →",
   heroVideoYoutubeId: "",
   heroSubPrice: "Mức giá trải nghiệm độc quyền: 10.000 VNĐ (Giá gốc: 2.990.000 VNĐ)",
 
@@ -230,7 +230,7 @@ export const DEFAULT_CONTENT: PageContent = {
       lead: "Không còn phải làm công nhân lắp ráp",
       items: [
         "ChatGPT đưa ra văn bản thô ➔ Bạn phải tự làm web, tự đăng bài, tự ghép ảnh.",
-        "Antigravity nhận lệnh ➔ Tự mở file, tự chạy code, tự đẩy lên internet và bàn giao kết quả."
+        "AI Agent nhận lệnh ➔ Tự mở file, tự chạy code, tự đẩy lên internet và bàn giao kết quả."
       ]
     }
   ],
@@ -273,7 +273,7 @@ export const DEFAULT_CONTENT: PageContent = {
   ],
   
   discoveryLabel: "BỘ KỸ NĂNG THỰC CHIẾN",
-  discoveryHeading: "Trọn bộ Skills đóng gói sẵn trong gói Antigravity Pro:",
+  discoveryHeading: "Trọn bộ Skills đóng gói sẵn trong Hệ Thống AI Agent:",
   discoveryItems: [
     { title: "ai-face-clone", desc: "Tự sinh ảnh avatar, poster, mockup chuẩn 100% khuôn mặt và trang phục của bạn." },
     { title: "miss-ban-hang", desc: "Tự viết copy, tạo landing page chuẩn AIDA và gắn VietQR ngân hàng chính chủ." },
@@ -293,7 +293,7 @@ export const DEFAULT_CONTENT: PageContent = {
   ],
 
   skillsLabel: "VŨ KHÍ THỰC THI",
-  skillsHeading: "4 Năng Lực Cốt Lõi Của Nhân Sự Số Antigravity:",
+  skillsHeading: "4 Năng Lực Cốt Lõi Của Nhân Sự Số AI Agent:",
   skillCards: [
     { n: "01", title: "Visual Twin Engine", desc: "Khóa Face DNA tỉ lệ hàm, mắt, nụ cười. Tự soi ảnh kiểm tra độ giống >95% trước khi xuất bản." },
     { n: "02", title: "1-Shot Cashflow Machine", desc: "Biến ý tưởng thành tiền trong 30 giây. Web sống trên internet, khách quét QR là tiền về tài khoản." },
@@ -303,13 +303,13 @@ export const DEFAULT_CONTENT: PageContent = {
 
   midCtaHeading: "Đừng để mình mãi là công nhân lắp ráp cho Chatbot.",
   midCtaSub: "Nâng cấp lên Hệ Điều Hành Doanh Nghiệp 1 Người với mức phí ưu đãi 10.000 VNĐ.",
-  midCtaBtn: "MUA NGAY GÓI ANTIGRAVITY PRO (10.000đ)",
+  midCtaBtn: "KÍCH HOẠT HỆ THỐNG AI AGENT (10.000đ)",
 
   baLabel: "SỰ KHÁC BIỆT TRIỆT ĐỂ",
-  baHeading: "Trước & Sau Khi Trang Bị Antigravity Pro:",
+  baHeading: "Trước & Sau Khi Trang Bị Hệ Thống AI Agent:",
   baSub: "",
   beforeLabel: "CHATGPT THƯỜNG",
-  afterLabel: "ANTIGRAVITY PRO",
+  afterLabel: "AI AGENT THẾ HỆ MỚI",
   beforeItems: [
     "Phải tự copy text qua Word/Canva",
     "Ảnh sinh ra mặt Tây/Tàu ngẫu nhiên",
@@ -336,7 +336,7 @@ export const DEFAULT_CONTENT: PageContent = {
       n: "Bước 2", 
       time: "1 Cú Click",
       title: "Cài Đặt 1-Shot Vào Máy", 
-      desc: "Chạy 1 câu lệnh tự động nạp toàn bộ Skills, Face DNA và tokens vào Antigravity."
+      desc: "Chạy 1 câu lệnh tự động nạp toàn bộ Skills, Face DNA và cấu hình vào hệ thống."
     },
     { 
       n: "Bước 3", 
@@ -355,7 +355,7 @@ export const DEFAULT_CONTENT: PageContent = {
   instructorBadge: "SYSTEM ARCHITECT",
   instructorBio: [
     "Hơn 15 năm kinh nghiệm trong lĩnh vực lập trình hệ thống, đào tạo công nghệ và tự động hóa doanh nghiệp.",
-    "Tác giả hệ sinh thái cỗ máy nội dung & bán hàng tự động 1-Shot trên nền tảng Antigravity.",
+    "Tác giả hệ sinh thái cỗ máy nội dung & bán hàng tự động 1-Shot trên nền tảng AI Agent thế hệ mới.",
     "Trực tiếp chuyển giao và đóng gói năng lực Agentic AI cho hàng nghìn học viên và chủ doanh nghiệp số."
   ],
   instructorHighlights: [
@@ -396,7 +396,7 @@ export const DEFAULT_CONTENT: PageContent = {
   countdownLabel: "⏳ Thời gian áp dụng mức giá thử nghiệm:",
   valueStackTitle: "TỔNG GIÁ TRỊ BẠN SẼ NHẬN ĐƯỢC:",
   valueStack: [
-    { label: "Gói Antigravity Pro (Full 3 Trụ Cột)", price: "1.990.000đ" },
+    { label: "Hệ Thống AI Agent Tự Hành (Full 3 Trụ Cột)", price: "1.990.000đ" },
     { label: "Module Visual Twin (Face DNA Engine)", price: "990.000đ" },
     { label: "Cỗ Máy Miss Bán Hàng 1-Shot + VietQR", price: "990.000đ" },
     { label: "Daemon Telegram Remote 2 Chiều", price: "500.000đ" },

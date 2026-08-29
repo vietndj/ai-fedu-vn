@@ -1,6 +1,6 @@
 export const siteConfig = {
   product: {
-    name: "Hệ Điều Hành Doanh Nghiệp 1 Người (The 1-Person AI Empire - Antigravity Pro)",
+    name: "Hệ Điều Hành Doanh Nghiệp 1 Người (The 1-Person AI Agent Empire)",
     price: "10.000",
     originalPrice: "2.990.000",
     category: "hệ thống AI",
