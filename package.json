@@ -4,9 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "npx vite@7.3.2 --config vite.config.ts --host 0.0.0.0",
-    "build": "npx vite@7.3.2 build --config vite.config.ts",
-    "serve": "npx vite@7.3.2 preview --config vite.config.ts --host 0.0.0.0",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
