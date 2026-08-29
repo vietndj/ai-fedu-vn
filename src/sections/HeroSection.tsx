@@ -61,25 +61,42 @@ export function HeroSection() {
               margin: "0 auto 24px",
               maxWidth: 580,
               width: "100%",
-              background: "rgba(255, 255, 255, 0.01)",
-              border: `1px dashed ${t.accent}33`,
-              borderRadius: 16,
-              padding: "16px clamp(16px, 4vw, 28px)",
+              background: "rgba(255, 255, 255, 0.02)",
+              border: `1px solid ${t.accent}28`,
+              borderRadius: 14,
+              padding: "14px clamp(16px, 3.5vw, 24px)",
               position: "relative",
-              backdropFilter: "blur(8px)",
-              boxShadow: `0 8px 32px -8px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.05)`,
+              backdropFilter: "blur(12px)",
+              boxShadow: `0 8px 28px -6px rgba(0,0,0,0.6), inset 0 1px 1px rgba(255,255,255,0.05)`,
             }}>
-              <span style={{ position: "absolute", top: 4, left: 16, fontSize: 36, fontFamily: "Georgia, serif", color: `${t.accent}33`, lineHeight: 1, userSelect: "none" }}>“</span>
               <div style={{
-                fontFamily: t.fontDisplay, fontSize: "clamp(15px, 2vw, 19px)", fontStyle: "italic",
-                fontWeight: 600, color: "var(--cl-accent)", lineHeight: 1.6, textAlign: "center",
-                display: "flex", flexDirection: "column", gap: 6, position: "relative", zIndex: 2,
+                display: "flex", flexDirection: "column", gap: 8,
+                textAlign: "left", width: "100%",
               }}>
-                {(c as any).heroPoem.map((line: string, i: number) => (
-                  <span key={i} style={{ textWrap: "balance" }}>{line}</span>
-                ))}
+                {(c as any).heroPoem.map((line: string, i: number) => {
+                  const parts = line.split(":");
+                  const hasPrefix = parts.length > 1;
+                  return (
+                    <div key={i} style={{
+                      display: "flex", alignItems: "flex-start", gap: 9,
+                      fontSize: "clamp(13.5px, 1.8vw, 15.5px)",
+                      lineHeight: 1.5,
+                    }}>
+                      <span style={{ color: "var(--cl-accent)", fontSize: 13, flexShrink: 0, marginTop: 1.5 }}>✦</span>
+                      <div style={{ color: "var(--cl-text-base)", flex: 1 }}>
+                        {hasPrefix ? (
+                          <>
+                            <strong style={{ color: "var(--cl-accent)", fontWeight: 600, marginRight: 6 }}>{parts[0].trim()}:</strong>
+                            <span style={{ opacity: 0.92 }}>{parts.slice(1).join(":").trim()}</span>
+                          </>
+                        ) : (
+                          <span style={{ opacity: 0.95 }}>{line}</span>
+                        )}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-              <span style={{ position: "absolute", bottom: -16, right: 16, fontSize: 36, fontFamily: "Georgia, serif", color: `${t.accent}33`, lineHeight: 1, userSelect: "none" }}>”</span>
             </div>
           )}
 
