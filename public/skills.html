@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bộ Kỹ Năng AI — Nâng Cấp Bạn Thành Người Có Trợ Lý AI Thực Thi</title>
+  <meta name="description" content="3 kỹ năng AI làm sẵn: Phân tích video, Tạo ảnh theo khuôn mặt, Dựng web bán hàng. Cài 1 lần, dùng trọn đời. Tải về ngay.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @font-face { font-family:'SVN-Integral CF'; src:url('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/fonts/SVN-IntegralCF-Bold.ttf') format('truetype'); font-weight:700; font-display:swap; }
+    @font-face { font-family:'SVN-Integral CF'; src:url('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/fonts/SVN-IntegralCF-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'SVN-Poppins'; src:url('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/fonts/SVN-Poppins-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+    @font-face { font-family:'SVN-Poppins'; src:url('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/fonts/SVN-Poppins-SemiBold.ttf') format('truetype'); font-weight:600; font-display:swap; }
+    @font-face { font-family:'SVN-Acta'; src:url('https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/fonts/SVN-Acta-Regular.ttf') format('truetype'); font-weight:400; font-display:swap; }
+
+    :root {
+      --bg:#07090e; --surface:#0f141f; --card:#131b2b;
+      --border:rgba(59,130,246,0.15); --accent:#3b82f6;
+      --green:#10b981; --amber:#f59e0b; --rose:#f43f5e; --purple:#a78bfa;
+      --text:#b0b8c4; --radius:16px;
+    }
+    body { background:var(--bg); color:var(--text); font-family:'SVN-Poppins','Poppins',sans-serif; font-size:clamp(15px,1.8vw,17px); line-height:1.78; overflow-x:hidden; }
+    .fi { font-family:'SVN-Integral CF','Integral CF',sans-serif; }
+    .fa { font-family:'SVN-Acta','Acta',serif; }
+    .sec { max-width:860px; margin:0 auto; padding:100px 20px 40px; }
+    .sec--w { max-width:1020px; }
+    .sh { font-family:'SVN-Integral CF',sans-serif; line-height:1.15; letter-spacing:-0.018em; color:#fff; }
+    .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); transition:all .3s; }
+    .card:hover { border-color:rgba(59,130,246,0.35); box-shadow:0 0 30px rgba(59,130,246,0.1); }
+    .glow-btn { display:inline-flex; align-items:center; gap:10px; padding:18px 44px; border-radius:12px; font-weight:600; font-size:15px; background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#fff; box-shadow:0 4px 25px rgba(37,99,235,0.35); transition:all .25s; text-decoration:none; }
+    .glow-btn:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(37,99,235,0.5); }
+    .io-box { display:flex; align-items:stretch; gap:0; border-radius:14px; overflow:hidden; background:#0a0e16; border:1px solid rgba(255,255,255,0.08); }
+    .io-in, .io-out { flex:1; padding:20px 24px; }
+    .io-in { background:rgba(59,130,246,0.06); border-right:1px solid rgba(255,255,255,0.06); }
+    .io-out { background:rgba(16,185,129,0.06); }
+    .io-label { font-family:'SVN-Integral CF',sans-serif; font-size:10px; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:8px; }
+    .arrow-sep { display:flex; align-items:center; justify-content:center; width:44px; background:rgba(255,255,255,0.03); color:var(--accent); font-size:18px; flex-shrink:0; }
+    .step-num { width:28px; height:28px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:11px; font-weight:700; flex-shrink:0; }
+    @media(max-width:640px) {
+      .io-box { flex-direction:column; }
+      .arrow-sep { width:100%; height:36px; }
+      .io-in { border-right:0; border-bottom:1px solid rgba(255,255,255,0.06); }
+    }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- HERO — Ngắn gọn, rõ ý, 1 nút tải -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="sec sec--w text-center" style="padding-top:60px; padding-bottom:20px;">
+
+  <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8" style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); color:#34d399;">
+    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+    Phiên bản mới nhất • Tự động cập nhật
+  </div>
+
+  <h1 class="sh text-3xl sm:text-4xl md:text-[2.8rem] font-bold mb-5 max-w-3xl mx-auto">
+    BỘ KỸ NĂNG AI<br>
+    <span class="bg-gradient-to-r from-blue-400 via-indigo-300 to-teal-300 bg-clip-text text-transparent">BIẾN BẠN THÀNH NGƯỜI CÓ TRỢ LÝ</span>
+  </h1>
+
+  <p class="text-base sm:text-lg max-w-2xl mx-auto mb-4" style="color:#94a3b8;">
+    3 kỹ năng cài vào Agent AI trên máy tính. Bạn ra lệnh bằng tiếng Việt bình thường, AI tự làm thay từ đầu đến cuối.
+  </p>
+  <p class="fa italic text-sm mb-10" style="color:#64748b;">
+    Không phần mềm lạ. Không cần biết code. Cài 1 lần, dùng trọn đời, tự cập nhật bản mới.
+  </p>
+
+  <div class="flex flex-wrap items-center justify-center gap-4 mb-6">
+    <a href="https://github.com/vietndj/AI-Skill" target="_blank" class="glow-btn">
+      <i class="fa-solid fa-download"></i>
+      Tải Về Miễn Phí
+    </a>
+    <a href="#xem-ky-nang" class="inline-flex items-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold transition" style="background:#111827; border:1px solid #1f2937; color:#fff;" onmouseover="this.style.background='#1f2937'" onmouseout="this.style.background='#111827'">
+      <i class="fa-solid fa-eye" style="color:#3b82f6;"></i>
+      Xem 3 Kỹ Năng Bên Dưới
+    </a>
+  </div>
+
+  <p class="text-xs" style="color:#4b5563;">Mã kích hoạt sẽ nhập bên trong Agent sau khi cài đặt.</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- KỸ NĂNG 1: PHÂN TÍCH VIDEO — ĐẦU VÀO → ĐẦU RA -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section id="xem-ky-nang" class="sec sec--w" style="padding-top:80px;">
+
+  <!-- Skill Header -->
+  <div class="flex items-center gap-3 mb-3">
+    <div class="step-num" style="background:rgba(59,130,246,0.15); color:#60a5fa;">01</div>
+    <span class="fi text-xs font-bold tracking-wider" style="color:#60a5fa;">KỸ NĂNG PHÂN TÍCH VIDEO</span>
+  </div>
+  <h2 class="sh text-xl sm:text-2xl font-bold mb-3">DÁN LINK VIDEO → NHẬN BÁO CÁO ĐẠO DIỄN PDF</h2>
+  <p class="text-sm mb-8" style="color:#94a3b8; max-width:680px;">
+    Thấy clip nào trên mạng hay, dán link vào là AI tự tải video, tự cắt từng cảnh, tự phân tích góc quay, ánh sáng, bảng màu và xuất ngay file PDF chuyên nghiệp để bạn học theo.
+  </p>
+
+  <!-- INPUT → OUTPUT Box -->
+  <div class="io-box mb-6">
+    <div class="io-in">
+      <div class="io-label" style="color:#60a5fa;">Đầu vào (Bạn làm)</div>
+      <div class="text-sm text-white font-semibold mb-2">Dán 1 đường link video</div>
+      <div class="text-xs" style="color:#64748b;">
+        Gửi link TikTok, Instagram Reels, YouTube Shorts hoặc kéo thả file .mp4 vào khung chat Agent.
+      </div>
+      <div class="mt-3 px-3 py-2 rounded-lg text-xs font-mono" style="background:#070a11; color:#60a5fa; border:1px solid rgba(255,255,255,0.06);">
+        "Phân tích video này: https://tiktok.com/@abc/video/123"
+      </div>
+    </div>
+    <div class="arrow-sep"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="io-out">
+      <div class="io-label" style="color:#34d399;">Đầu ra (AI trả về)</div>
+      <div class="text-sm text-white font-semibold mb-2">File PDF Báo Cáo Đạo Diễn A4</div>
+      <div class="text-xs" style="color:#64748b;">
+        PDF giao diện Dark Mode sang trọng, mở được trên mọi máy tính và điện thoại.
+      </div>
+    </div>
+  </div>
+
+  <!-- Chi tiết bên trong PDF -->
+  <div class="card p-5 sm:p-8">
+    <div class="text-xs font-semibold mb-4" style="color:#94a3b8;">
+      <i class="fa-solid fa-file-pdf mr-1.5" style="color:#f43f5e;"></i>
+      BÊN TRONG FILE PDF BẠN NHẬN ĐƯỢC:
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div class="p-3.5 rounded-xl" style="background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.12);">
+        <div class="text-xs font-bold text-white mb-1"><i class="fa-solid fa-scissors mr-1.5" style="color:#60a5fa;"></i>Cắt cảnh tự động (OpenCV)</div>
+        <div class="text-[11px]" style="color:#94a3b8;">AI phát hiện từng điểm chuyển cảnh trong video, đánh số Shot #01, #02, #03... chính xác đến từng giây.</div>
+      </div>
+      <div class="p-3.5 rounded-xl" style="background:rgba(168,85,247,0.06); border:1px solid rgba(168,85,247,0.12);">
+        <div class="text-xs font-bold text-white mb-1"><i class="fa-solid fa-images mr-1.5" style="color:#a78bfa;"></i>3 Ảnh Chụp Mỗi Cảnh</div>
+        <div class="text-[11px]" style="color:#94a3b8;">Mỗi cảnh được chụp 3 khung hình (Đầu – Giữa – Cuối) để bạn thấy rõ cách quay chuyển động.</div>
+      </div>
+      <div class="p-3.5 rounded-xl" style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.12);">
+        <div class="text-xs font-bold text-white mb-1"><i class="fa-solid fa-palette mr-1.5" style="color:#f59e0b;"></i>Bảng 4 Màu Chủ Đạo</div>
+        <div class="text-[11px]" style="color:#94a3b8;">Trích 4 mã màu HEX chính xác từ mỗi cảnh để bạn set ánh sáng, chỉnh màu giống y nguyên.</div>
+      </div>
+      <div class="p-3.5 rounded-xl" style="background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.12);">
+        <div class="text-xs font-bold text-white mb-1"><i class="fa-solid fa-scale-balanced mr-1.5" style="color:#34d399;"></i>Đánh Giá 2 Chiều Khen/Chê</div>
+        <div class="text-[11px]" style="color:#94a3b8;">Mỗi cảnh được chấm điểm: <span class="text-emerald-400">Điểm sáng</span> (cái hay đáng học) và <span style="color:#f43f5e;">Hạn chế</span> (cái cần tránh).</div>
+      </div>
+    </div>
+
+    <div class="mt-4 p-3.5 rounded-xl flex items-start gap-3" style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.15);">
+      <i class="fa-solid fa-lightbulb mt-0.5" style="color:#f59e0b;"></i>
+      <div class="text-xs" style="color:#d4d4d8;">
+        <strong class="text-white">Kịch bản chuyển thể 1-1:</strong> Ở cuối báo cáo, AI viết sẵn 1 kịch bản quay lại dạng 2 cột (cảnh trái – lời phải) để bạn cầm theo quay ngay mà không cần nghĩ gì thêm.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- KỸ NĂNG 2: TẠO ẢNH THEO KHUÔN MẶT — ĐẦU VÀO → ĐẦU RA -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="sec sec--w">
+
+  <div class="flex items-center gap-3 mb-3">
+    <div class="step-num" style="background:rgba(168,85,247,0.15); color:#a78bfa;">02</div>
+    <span class="fi text-xs font-bold tracking-wider" style="color:#a78bfa;">KỸ NĂNG TẠO ẢNH AI THEO MẶT BẠN</span>
+  </div>
+  <h2 class="sh text-xl sm:text-2xl font-bold mb-3">NHẮN TIẾNG VIỆT → NHẬN ẢNH CÓ ĐÚNG MẶT BẠN</h2>
+  <p class="text-sm mb-8" style="color:#94a3b8; max-width:680px;">
+    Cài đặt khuôn mặt 1 lần duy nhất. Từ đó về sau, mỗi khi bạn nhờ AI tạo ảnh có người — dù là avatar, poster, minh họa bài viết hay phân cảnh kịch bản — nhân vật trong ảnh sẽ mang đúng khuôn mặt của bạn.
+  </p>
+
+  <!-- INPUT → OUTPUT -->
+  <div class="io-box mb-6">
+    <div class="io-in">
+      <div class="io-label" style="color:#a78bfa;">Đầu vào (Bạn làm)</div>
+      <div class="text-sm text-white font-semibold mb-2">Nhắn lệnh bằng tiếng Việt</div>
+      <div class="text-xs mb-3" style="color:#64748b;">
+        Mô tả bối cảnh bạn muốn bằng ngôn ngữ bình thường, không cần thuật ngữ gì.
+      </div>
+      <div class="space-y-1.5 text-xs font-mono" style="color:#c4b5fd;">
+        <div class="px-3 py-1.5 rounded-lg" style="background:#070a11; border:1px solid rgba(255,255,255,0.06);">
+          "Tạo ảnh tôi đang ngồi làm việc bên bàn gỗ"
+        </div>
+        <div class="px-3 py-1.5 rounded-lg" style="background:#070a11; border:1px solid rgba(255,255,255,0.06);">
+          "Vẽ cho tôi poster phong cách chạy bộ buổi sáng"
+        </div>
+      </div>
+    </div>
+    <div class="arrow-sep"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="io-out">
+      <div class="io-label" style="color:#34d399;">Đầu ra (AI trả về)</div>
+      <div class="text-sm text-white font-semibold mb-2">Ảnh AI giống bạn &gt;95%</div>
+      <div class="text-xs" style="color:#64748b;">
+        AI tự gắn khuôn mặt bạn vào ảnh, tự soi lại 3 nét (xương hàm, mắt, nụ cười). Nếu chưa giống thì tự vẽ lại cho đến khi đạt.
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 Phong cách ảnh tự động -->
+  <div class="card p-5 sm:p-8">
+    <div class="text-xs font-semibold mb-4" style="color:#94a3b8;">
+      <i class="fa-solid fa-wand-magic-sparkles mr-1.5" style="color:#a78bfa;"></i>
+      4 PHONG CÁCH ẢNH TỰ ĐỘNG (CÓ SẴN, DÙNG NGAY):
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+      <div class="p-4 rounded-xl text-center" style="background:rgba(59,130,246,0.06); border:1px solid rgba(59,130,246,0.12);">
+        <div class="w-11 h-11 rounded-xl mx-auto mb-2 flex items-center justify-center text-base" style="background:rgba(59,130,246,0.12); color:#60a5fa;">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div class="text-xs font-bold text-white">Chuyên Gia Studio</div>
+        <div class="text-[10px] mt-0.5" style="color:#64748b;">Ảnh vuông 1:1 • Nền phòng studio</div>
+      </div>
+      <div class="p-4 rounded-xl text-center" style="background:rgba(16,185,129,0.06); border:1px solid rgba(16,185,129,0.12);">
+        <div class="w-11 h-11 rounded-xl mx-auto mb-2 flex items-center justify-center text-base" style="background:rgba(16,185,129,0.12); color:#34d399;">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <div class="text-xs font-bold text-white">Bàn Làm Việc</div>
+        <div class="text-[10px] mt-0.5" style="color:#64748b;">Ngang 16:9 • Bàn gỗ cây xanh</div>
+      </div>
+      <div class="p-4 rounded-xl text-center" style="background:rgba(245,158,11,0.06); border:1px solid rgba(245,158,11,0.12);">
+        <div class="w-11 h-11 rounded-xl mx-auto mb-2 flex items-center justify-center text-base" style="background:rgba(245,158,11,0.12); color:#f59e0b;">
+          <i class="fa-solid fa-person-running"></i>
+        </div>
+        <div class="text-xs font-bold text-white">Thể Thao</div>
+        <div class="text-[10px] mt-0.5" style="color:#64748b;">Dọc 9:16 • Chạy bộ bình minh</div>
+      </div>
+      <div class="p-4 rounded-xl text-center" style="background:rgba(168,85,247,0.06); border:1px solid rgba(168,85,247,0.12);">
+        <div class="w-11 h-11 rounded-xl mx-auto mb-2 flex items-center justify-center text-base" style="background:rgba(168,85,247,0.12); color:#c4b5fd;">
+          <i class="fa-solid fa-spa"></i>
+        </div>
+        <div class="text-xs font-bold text-white">Thiên Nhiên</div>
+        <div class="text-[10px] mt-0.5" style="color:#64748b;">Ngang 16:9 • Núi rừng thư thái</div>
+      </div>
+    </div>
+
+    <div class="mt-4 p-3.5 rounded-xl flex items-start gap-3" style="background:rgba(168,85,247,0.06); border:1px solid rgba(168,85,247,0.15);">
+      <i class="fa-solid fa-shirt mt-0.5" style="color:#a78bfa;"></i>
+      <div class="text-xs" style="color:#d4d4d8;">
+        <strong class="text-white">Giữ trang phục xuyên suốt:</strong> Khi cần bộ 5-10 ảnh (ví dụ làm phân cảnh kịch bản), nhân vật sẽ mặc đúng 1 bộ đồ trong toàn bộ loạt ảnh — không bị AI tự đổi quần áo giữa chừng.
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- KỸ NĂNG 3: DỰNG WEB BÁN HÀNG — ĐẦU VÀO → ĐẦU RA -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="sec sec--w">
+
+  <div class="flex items-center gap-3 mb-3">
+    <div class="step-num" style="background:rgba(16,185,129,0.15); color:#34d399;">03</div>
+    <span class="fi text-xs font-bold tracking-wider" style="color:#34d399;">KỸ NĂNG DỰNG WEB BÁN HÀNG</span>
+  </div>
+  <h2 class="sh text-xl sm:text-2xl font-bold mb-3">NHẮN 1 CÂU → CÓ NGAY WEBSITE THU TIỀN 24/7</h2>
+  <p class="text-sm mb-8" style="color:#94a3b8; max-width:680px;">
+    Bạn mô tả sản phẩm muốn bán trong 1 câu. AI tự viết nội dung, tự thiết kế giao diện, tự gắn mã QR ngân hàng và tự đưa web lên mạng. Khách quét mã chuyển khoản là tiền về thẳng tài khoản bạn.
+  </p>
+
+  <!-- INPUT → OUTPUT -->
+  <div class="io-box mb-6">
+    <div class="io-in">
+      <div class="io-label" style="color:#34d399;">Đầu vào (Bạn làm)</div>
+      <div class="text-sm text-white font-semibold mb-2">Nhắn 1 câu mô tả sản phẩm</div>
+      <div class="mt-3 px-3 py-2 rounded-lg text-xs font-mono" style="background:#070a11; color:#6ee7b7; border:1px solid rgba(255,255,255,0.06);">
+        "Tạo cho tôi trang web bán gói tư vấn thiết kế nội thất giá 2 triệu"
+      </div>
+      <div class="text-[11px] mt-2" style="color:#4b5563;">AI không hỏi lại, tự suy luận toàn bộ.</div>
+    </div>
+    <div class="arrow-sep"><i class="fa-solid fa-arrow-right"></i></div>
+    <div class="io-out">
+      <div class="io-label" style="color:#34d399;">Đầu ra (AI trả về)</div>
+      <div class="text-sm text-white font-semibold mb-2">Website bán hàng live trên mạng</div>
+      <div class="text-xs" style="color:#64748b;">
+        Có sẵn: giao diện đẹp, nội dung bán hàng, mã QR thanh toán tự động, nút Zalo/hotline.
+      </div>
+    </div>
+  </div>
+
+  <!-- Chi tiết pipeline -->
+  <div class="card p-5 sm:p-8">
+    <div class="text-xs font-semibold mb-4" style="color:#94a3b8;">
+      <i class="fa-solid fa-gears mr-1.5" style="color:#34d399;"></i>
+      AI TỰ ĐỘNG LÀM HẾT NHỮNG GÌ:
+    </div>
+    <div class="space-y-3">
+      <div class="flex items-start gap-3">
+        <div class="step-num mt-0.5" style="background:rgba(16,185,129,0.15); color:#34d399; font-size:10px;">1</div>
+        <div>
+          <div class="text-xs font-bold text-white">Tự viết nội dung marketing</div>
+          <div class="text-[11px]" style="color:#94a3b8;">Tiêu đề gây chú ý, nỗi đau khách hàng, giải pháp, câu hỏi thường gặp, giá trị nhận được — tất cả tự viết.</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <div class="step-num mt-0.5" style="background:rgba(16,185,129,0.15); color:#34d399; font-size:10px;">2</div>
+        <div>
+          <div class="text-xs font-bold text-white">Tự gắn mã QR ngân hàng</div>
+          <div class="text-[11px]" style="color:#94a3b8;">Khách bấm nút thanh toán → hiện mã QR tự động điền đúng số tiền và nội dung chuyển khoản → quét là tiền về tài khoản bạn.</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <div class="step-num mt-0.5" style="background:rgba(16,185,129,0.15); color:#34d399; font-size:10px;">3</div>
+        <div>
+          <div class="text-xs font-bold text-white">Tự đưa lên mạng (có link .com ngay)</div>
+          <div class="text-[11px]" style="color:#94a3b8;">Không cần thuê hosting, không cần biết code. AI tạo xong gửi bạn 1 đường link website hoạt động ngay lập tức.</div>
+        </div>
+      </div>
+      <div class="flex items-start gap-3">
+        <div class="step-num mt-0.5" style="background:rgba(16,185,129,0.15); color:#34d399; font-size:10px;">4</div>
+        <div>
+          <div class="text-xs font-bold text-white">Muốn sửa thì nhắn lệnh, không cần mở code</div>
+          <div class="text-[11px]" style="color:#94a3b8;">Khi cần đổi sản phẩm hoặc sửa giá, chỉ cần nhắn: <em>"Đổi giá thành 3 triệu, thay ảnh bìa"</em> — AI tự sửa trong 5-10 phút.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- HƯỚNG DẪN CÀI ĐẶT — 3 bước, rõ ràng -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="sec sec--w">
+  <div class="card p-6 sm:p-10 relative overflow-hidden" style="border-color:rgba(59,130,246,0.3);">
+    <div class="absolute -right-16 -top-16 w-48 h-48 rounded-full blur-3xl pointer-events-none" style="background:rgba(59,130,246,0.1);"></div>
+
+    <div class="text-center max-w-2xl mx-auto mb-10">
+      <h2 class="sh text-xl sm:text-2xl font-bold mb-2">CÀI ĐẶT TRONG 2 PHÚT</h2>
+      <p class="text-xs" style="color:#94a3b8;">Tải về, mở Agent, dán 1 câu lệnh. Xong.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+      <div class="p-5 rounded-xl text-center" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
+        <div class="step-num mx-auto mb-3" style="background:#2563eb; color:#fff;">1</div>
+        <div class="text-sm font-bold text-white mb-1">Mở Agent AI trên máy tính</div>
+        <div class="text-[11px]" style="color:#64748b;">Mở chương trình Agent AI của bạn lên, vào ô nhắn tin (chat).</div>
+      </div>
+      <div class="p-5 rounded-xl text-center" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
+        <div class="step-num mx-auto mb-3" style="background:#7c3aed; color:#fff;">2</div>
+        <div class="text-sm font-bold text-white mb-1">Dán câu lệnh cài đặt</div>
+        <div class="text-[11px]" style="color:#64748b;">Copy dòng lệnh bên dưới, dán vào chat Agent và nhấn Enter.</div>
+      </div>
+      <div class="p-5 rounded-xl text-center" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
+        <div class="step-num mx-auto mb-3" style="background:#059669; color:#fff;">3</div>
+        <div class="text-sm font-bold text-white mb-1">Nhập mã kích hoạt</div>
+        <div class="text-[11px]" style="color:#64748b;">Agent hỏi mã → nhập mã <code style="color:#6ee7b7;">AI-XXXXXX</code> bạn đã nhận → dùng trọn đời.</div>
+      </div>
+    </div>
+
+    <!-- Copy Command -->
+    <div class="max-w-xl mx-auto">
+      <div class="text-xs font-semibold mb-2 text-center" style="color:#64748b;">
+        <i class="fa-solid fa-terminal mr-1" style="color:#3b82f6;"></i>
+        Câu lệnh cài đặt (copy rồi dán vào chat Agent):
+      </div>
+      <div class="flex items-center gap-2">
+        <div id="installCmd" class="flex-1 px-4 py-3 rounded-xl text-xs sm:text-sm font-mono" style="background:#070a11; border:1px solid rgba(255,255,255,0.08); color:#60a5fa; user-select:all;">
+          Cài skills: https://github.com/vietndj/AI-Skill
+        </div>
+        <button onclick="copyInstall()" id="copyBtn" class="px-4 py-3 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 shrink-0" style="background:#2563eb; color:#fff;">
+          <i class="fa-solid fa-copy"></i> Copy
+        </button>
+      </div>
+      <div id="copyOk" class="text-center text-xs mt-2 font-semibold hidden" style="color:#34d399;">
+        ✓ Đã copy — dán vào chat Agent
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- TÓM TẮT GIÁ TRỊ — ngắn gọn, đóng đinh -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<section class="sec text-center" style="padding-top:60px;">
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
+    <div class="p-4 rounded-xl" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
+      <div class="fi text-lg text-blue-400 font-bold">3</div>
+      <div class="text-[11px]" style="color:#64748b;">Kỹ năng làm sẵn</div>
+    </div>
+    <div class="p-4 rounded-xl" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
+      <div class="fi text-lg font-bold" style="color:#34d399;">1 LẦN</div>
+      <div class="text-[11px]" style="color:#64748b;">Cài 1 lần dùng trọn đời</div>
+    </div>
+    <div class="p-4 rounded-xl" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
+      <div class="fi text-lg font-bold" style="color:#a78bfa;">TỰ ĐỘNG</div>
+      <div class="text-[11px]" style="color:#64748b;">Cập nhật bản mới ngầm</div>
+    </div>
+    <div class="p-4 rounded-xl" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
+      <div class="fi text-lg font-bold" style="color:#f59e0b;">TIẾNG VIỆT</div>
+      <div class="text-[11px]" style="color:#64748b;">Nhắn lệnh đời thường</div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- FOOTER — nhẹ, không brand -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<footer class="py-10 px-6 text-center text-xs" style="color:#374151; border-top:1px solid rgba(255,255,255,0.04); margin-top:60px;">
+  <div>Bộ Kỹ Năng AI • Cập nhật liên tục • Chạy trên Google Gemini</div>
+</footer>
+
+<script>
+function copyInstall(){
+  const t = document.getElementById('installCmd').textContent.trim();
+  navigator.clipboard.writeText(t).then(()=>{
+    const b = document.getElementById('copyBtn');
+    const n = document.getElementById('copyOk');
+    b.style.background='#059669';
+    b.innerHTML='<i class="fa-solid fa-check"></i> OK';
+    n.classList.remove('hidden');
+    setTimeout(()=>{ b.style.background='#2563eb'; b.innerHTML='<i class="fa-solid fa-copy"></i> Copy'; n.classList.add('hidden'); },2500);
+  });
+}
+</script>
+</body>
+</html>

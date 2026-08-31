@@ -7,10 +7,25 @@
 - **Grid / Card**: Khóa cứng `maxWidth: 1020px`. (Dùng class `.cl-sec--full`).
 - **Padding giữa các khối**: Luôn duy trì `padding-top: 120px` (được cấu hình trong `.cl-sec`).
 
-## 2. Hệ Phông Chữ (Typography Stack)
-- **Heading (Tiêu đề chính)**: `Noe Display` (`fontDisplay`). Độ đậm khóa ở mức `500 (Medium)`, tuyệt đối không dùng 700/800/900.
-- **Body (Văn bản dài, mô tả)**: `Aeonik` / `Inter` (`fontBody`). Độ đậm `400 (Regular)`.
-- **Accent / Meta (Nhãn tag, Label, Mã giảm giá, Header cột)**: `JetBrains Mono` (`fontMono`). Bắt buộc IN HOA và `letter-spacing: 0.15em` đến `0.18em`.
+## 2. Hệ Phông Chữ Bắt Buộc (Strict Typography Stack - 3 Phông Độc Quyền)
+**MẶC ĐỊNH BẮT BUỘC: Toàn bộ các file HTML, Landing Page, Báo cáo xuất bản từ nay về sau CHỈ ĐƯỢC PHÉP SỬ DỤNG DUY NHẤT 3 PHÔNG CHỮ NÀY. TUYỆT ĐỐI KHÔNG DÙNG BẤT KỲ PHÔNG CHỮ NÀO KHÁC.**
+
+1. **`SVN-Integral CF` / `Integral CF` (Tiêu đề, Heading, Hero Display, Số liệu & Badge)**:
+   - Dùng cho toàn bộ thẻ H1, H2, H3, tiêu đề phân cảnh, con số thống kê nổi bật, tên thương hiệu.
+   - Font-weight: `Bold / Heavy / 700`.
+   - CSS: `font-family: 'SVN-Integral CF', 'Integral CF', sans-serif;`
+
+2. **`SVN-Poppins` / `Poppins` (Nội dung chính, Body Text, Thẻ Card, Nút bấm & Thao tác)**:
+   - Dùng cho toàn bộ văn bản mô tả, nội dung thẻ card, nút CTA, bảng biểu, danh sách tính năng, giao diện điều khiển.
+   - Font-weight: `400 (Regular)` đến `600 (SemiBold)`.
+   - CSS: `font-family: 'SVN-Poppins', 'Poppins', sans-serif;`
+
+3. **`SVN-Acta` / `Acta` (Trích dẫn, Tự sự, Editorial, Highlight & Subtitle nghệ thuật)**:
+   - Dùng cho các câu trích dẫn (Quotes), lời thoại đắt giá, phân đoạn cảm xúc, subtitle nghiêng mang tính tự sự/nghệ thuật.
+   - Font-weight: `400 (Book) / 700 (Bold) / Italic`.
+   - CSS: `font-family: 'SVN-Acta', 'Acta', serif;`
+
+> ⛔ **QUY TẮC CẤM:** Tuyệt đối không sử dụng các phông chữ khác như *Inter, Roboto, Arial, Plus Jakarta Sans, Open Sans, Noe Display, Times New Roman...* Mọi file HTML đều phải nhúng `@font-face` chuẩn cho 3 phông trên.
 
 ## 3. Tiêu đề & Cân bằng dọc (Vertical Rhythm)
 - **Line-Height (Chiều cao dòng)**: Khóa ở mức `1.15` cho tiêu đề Noe Display.
@@ -29,7 +44,7 @@
 ## 6. Bản Chất Sản Phẩm & Quy Chuẩn Nội Dung (Kim Chỉ Nam Bắt Buộc)
 
 ### 6.1. Định vị & Nền tảng cốt lõi
-- **Sản phẩm:** Gói chia sẻ kinh nghiệm + bàn giao 3 công cụ làm sẵn giúp người làm video rảnh tay, giá ưu đãi 499k của Thầy Nguyễn Đức Việt.
+- **Sản phẩm:** Gói chia sẻ kinh nghiệm + bàn giao 3 công cụ làm sẵn giúp người làm video rảnh tay, giá 3.000.000đ (3 triệu) của Thầy Nguyễn Đức Việt.
 - **Nền tảng lõi: GOOGLE GEMINI QUEN THUỘC**
   - Toàn bộ hệ thống vận hành trực tiếp trên nền tảng **Google Gemini** bằng chính tài khoản Google của bạn.
   - **Không dùng phần mềm lạ làm nặng máy, không phụ thuộc công cụ trôi nổi ngoài thị trường.**
