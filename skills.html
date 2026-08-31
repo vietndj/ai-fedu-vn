@@ -269,16 +269,22 @@
           <span class="font-integral text-xs px-2.5 py-1 rounded-md bg-blue-500/10 border border-blue-500/20 text-blue-400">01</span>
           <span class="font-integral text-xs tracking-wider text-blue-400 uppercase">Trợ Lý Phân Tích Video</span>
         </div>
-        <span class="text-xs text-slate-500 hidden sm:inline-flex items-center gap-1.5">
-          <i class="fa-solid fa-bolt text-amber-400"></i> Xuất file PDF A4 trong 15s
-        </span>
+        <div class="flex items-center gap-3">
+          <a href="./assets/video-analysis/demo_director_report.pdf" target="_blank" class="text-xs text-amber-400 hover:text-amber-300 font-semibold inline-flex items-center gap-1.5 transition">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span>Xem PDF Mẫu (39 Trang) ↗</span>
+          </a>
+          <span class="text-xs text-slate-500 hidden sm:inline-flex items-center gap-1.5">
+            <i class="fa-solid fa-bolt text-amber-400"></i> Bóc tách trong 15s
+          </span>
+        </div>
       </div>
 
       <h2 class="text-xl sm:text-2xl font-semibold text-white mb-2">
         Dán Link Video Mẫu <span class="text-slate-400 font-normal">→</span> Nhận Báo Cáo Bóc Tách Phân Cảnh Chuẩn Đạo Diễn
       </h2>
       <p class="text-sm text-slate-400 mb-6 max-w-3xl">
-        Thấy clip nào trên mạng đang viral hay, dán link vào là AI tự động cắt từng cảnh, phân tích góc máy, ánh sáng, lấy 4 mã màu chủ đạo và xuất file PDF sang xịn để bạn quay theo ngay.
+        Thấy clip nào trên mạng đang viral hay, dán link vào là AI tự động cắt từng cảnh, phân tích góc máy, ánh sáng, lấy 4 mã màu chủ đạo, bóc kịch bản song ngữ và xuất file PDF sang xịn để bạn quay theo ngay.
       </p>
 
       <!-- Input / Output Interactive Box -->
@@ -288,7 +294,7 @@
             <i class="fa-solid fa-keyboard"></i> Đầu vào (Bạn làm)
           </div>
           <div class="text-xs text-slate-300 font-mono bg-black/40 p-2.5 rounded-lg border border-white/5">
-            "Phân tích clip này giúp tôi: [link_tiktok_hoac_reels]"
+            "Phân tích clip này giúp tôi: https://www.instagram.com/reel/DcJoysIuLS9/"
           </div>
           <div class="text-[11px] text-slate-500 mt-2">Hỗ trợ TikTok, Instagram Reels, Shorts, Facebook hoặc video MP4.</div>
         </div>
@@ -301,96 +307,272 @@
           <div class="font-integral text-[11px] text-emerald-400 uppercase mb-1.5 flex items-center gap-1.5">
             <i class="fa-solid fa-file-pdf"></i> Đầu ra (AI bàn giao)
           </div>
-          <div class="text-xs text-white font-medium">Báo cáo Đạo Diễn PDF A4 Dark-Mode</div>
-          <div class="text-[11px] text-slate-400 mt-1">Đầy đủ ảnh chụp 3 pha (Đầu-Giữa-Cuối), bảng màu HEX, điểm sáng, hạn chế và kịch bản 2 cột để quay lại.</div>
+          <div class="text-xs text-white font-medium">Báo cáo Đạo Diễn PDF A4 Dark-Mode (39 Trang)</div>
+          <div class="text-[11px] text-slate-400 mt-1">Đầy đủ ảnh chụp từng cảnh, bảng màu HEX, điểm sáng, hạn chế, kịch bản song ngữ và 3 mẫu CTA.</div>
         </div>
       </div>
 
-      <!-- ── MINH HỌA TRỰC QUAN: BÓC TÁCH PHÂN CẢNH THỰC TẾ ── -->
-      <div class="glass-inner rounded-2xl p-5 sm:p-6 mb-6 border border-blue-500/20 shadow-xl">
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/5 pb-3 mb-4">
-          <div class="flex items-center gap-2">
-            <span class="px-2 py-0.5 rounded bg-blue-500/20 text-[11px] font-mono text-blue-300 font-bold">MINH HỌA THỰC TẾ</span>
-            <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Trích Xuất 4 Cảnh Then Chốt Từ Video Mẫu</span>
-          </div>
-          <span class="text-[11px] text-slate-400">Thuật toán OpenCV tự bắt shot &amp; trích 4 mã màu HEX</span>
-        </div>
+      <!-- ── MINH HỌA TRỰC QUAN: QUY TRÌNH BÓC TÁCH TOÀN DIỆN ── -->
+      <div class="glass-inner rounded-2xl p-5 sm:p-6 mb-6 border border-blue-500/20 shadow-2xl space-y-6">
 
-        <!-- 4 Keyframe Cards Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3.5 mb-4">
-          <!-- Shot 1 -->
-          <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-blue-500/40 transition">
-            <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2.5 bg-slate-900 border border-white/5 relative">
-              <img src="./assets/video-analysis/shot_01.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_01.jpg'" alt="Phân cảnh 1" class="w-full h-full object-cover image-hover-zoom">
-              <div class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-blue-400 font-bold">
-                CẢNH 01 • 0s-0.75s
-              </div>
+        <!-- BƯỚC 1: VIDEO GỐC VÀ KHUNG LINK ĐẦU VÀO -->
+        <div class="pb-5 border-b border-white/5">
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-[11px] font-mono text-blue-300 font-bold">BƯỚC 1</span>
+              <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Video Gốc Mẫu &amp; Link Phân Tích Thực Tế</span>
             </div>
-            <div class="text-xs font-semibold text-white mb-1 line-clamp-1">Góc Trên Cao &amp; Gạt Tay</div>
-            <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Bắt mắt 1s đầu.</div>
-            <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
-              <b>💡 Cách làm:</b> Đưa tay tương tác camera ngay 3s đầu.
-            </div>
+            <span class="text-[11px] text-slate-400">Reels 65.36s • 39 Phân cảnh quay</span>
           </div>
 
-          <!-- Shot 2 -->
-          <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-amber-500/40 transition">
-            <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2.5 bg-slate-900 border border-white/5 relative">
-              <img src="./assets/video-analysis/shot_02.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_02.jpg'" alt="Phân cảnh 2" class="w-full h-full object-cover image-hover-zoom">
-              <div class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-amber-400 font-bold">
-                CẢNH 02 • 0.75s-2.88s
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-5 items-center">
+            <!-- Video Player -->
+            <div class="md:col-span-4 flex justify-center">
+              <div class="relative w-full max-w-[220px] rounded-xl overflow-hidden border border-blue-500/40 bg-black shadow-xl aspect-[9/16]">
+                <video src="./assets/video-analysis/demo_video.mp4" autoplay muted loop playsinline controls class="w-full h-full object-cover"></video>
+                <div class="absolute top-2 left-2 px-2 py-0.5 rounded bg-black/80 text-[9px] font-mono text-blue-400 font-bold border border-blue-500/30">
+                  ▶ DEMO 65s
+                </div>
               </div>
             </div>
-            <div class="text-xs font-semibold text-white mb-1 line-clamp-1">Nhìn Thẳng &amp; Chữ To</div>
-            <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Chữ đập mắt ngay.</div>
-            <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
-              <b>💡 Cách làm:</b> Đặt chữ 1/3 trên để tránh nút Like che.
-            </div>
-          </div>
 
-          <!-- Shot 3 -->
-          <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-cyan-500/40 transition">
-            <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2.5 bg-slate-900 border border-white/5 relative">
-              <img src="./assets/video-analysis/shot_03.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_03.jpg'" alt="Phân cảnh 3" class="w-full h-full object-cover image-hover-zoom">
-              <div class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-cyan-400 font-bold">
-                CẢNH 03 • 2.88s-4.50s
-              </div>
-            </div>
-            <div class="text-xs font-semibold text-white mb-1 line-clamp-1">Cận Cảnh Nắm Thanh Tạ</div>
-            <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Chi tiết chân thật.</div>
-            <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
-              <b>💡 Cách làm:</b> B-roll đặc tả chi tiết tạo cảm giác uy lực.
-            </div>
-          </div>
+            <!-- Video Info & Link -->
+            <div class="md:col-span-8 space-y-3">
+              <span class="inline-block px-2.5 py-0.5 rounded bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-wider font-mono">
+                VIDEO VIRAL CỦA TÁC GIẢ NƯỚC NGOÀI
+              </span>
+              <h3 class="text-sm sm:text-base font-bold text-white leading-snug">
+                Quy Trình 5 Bước Tự Quay &amp; Dựng Video Cho Creator Triệu View
+              </h3>
+              <p class="text-xs text-slate-300 leading-relaxed font-normal">
+                Thay vì mò mẫm không biết họ làm thế nào, bạn chỉ cần ném link vào. AI tự bóc sạch từng giây: góc máy, ánh sáng, nhịp cắt cảnh và kịch bản song ngữ.
+              </p>
 
-          <!-- Shot 4 -->
-          <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-purple-500/40 transition">
-            <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2.5 bg-slate-900 border border-white/5 relative">
-              <img src="./assets/video-analysis/shot_04.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_04.jpg'" alt="Phân cảnh 4" class="w-full h-full object-cover image-hover-zoom">
-              <div class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-purple-400 font-bold">
-                CẢNH 04 • 4.50s-6.20s
+              <div class="bg-black/60 border border-white/5 rounded-xl p-3 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs font-mono">
+                <div class="truncate w-full sm:w-auto">
+                  <span class="text-[10px] text-slate-500 block">Link Instagram Reels:</span>
+                  <span class="text-blue-300 font-bold truncate block">https://www.instagram.com/reel/DcJoysIuLS9/</span>
+                </div>
+                <span class="px-2.5 py-1 rounded-lg bg-blue-500/20 text-blue-300 text-[10px] font-bold shrink-0 border border-blue-500/30">
+                  ĐÃ PHÂN TÍCH
+                </span>
               </div>
-            </div>
-            <div class="text-xs font-semibold text-white mb-1 line-clamp-1">B-roll Đổi Nhịp Visual</div>
-            <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Nhịp xem cuốn hút.</div>
-            <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
-              <b>💡 Cách làm:</b> Chuyển shot dưới 3 giây để giữ chân người xem.
+
+              <div class="flex flex-wrap gap-2 text-[10px] font-mono text-slate-400 pt-1">
+                <span class="px-2 py-0.5 rounded bg-slate-900 border border-white/5">⏱ Thời lượng: 65.36s</span>
+                <span class="px-2 py-0.5 rounded bg-slate-900 border border-white/5">📐 1080x1920 (9:16)</span>
+                <span class="px-2 py-0.5 rounded bg-slate-900 border border-white/5">✂️ 39 Phân cảnh chi tiết</span>
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- 4 Swatches trích màu -->
-        <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5 text-[11px]">
-          <span class="text-slate-400 font-medium flex items-center gap-1.5">
-            <i class="fa-solid fa-palette text-amber-400"></i> Bảng 4 màu chủ đạo trích xuất:
-          </span>
-          <div class="flex items-center gap-2">
-            <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#1e293b] border border-white/20"></span> #1E293B</span>
-            <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#f8fafc] border border-white/20"></span> #F8FAFC</span>
-            <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#f59e0b] border border-white/20"></span> #F59E0B</span>
-            <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#06b6d4] border border-white/20"></span> #06B6D4</span>
+        <!-- BƯỚC 2: KỊCH BẢN SONG NGỮ 2 CỘT -->
+        <div class="pb-5 border-b border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-amber-500/20 text-[11px] font-mono text-amber-300 font-bold">BƯỚC 2</span>
+              <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Bóc Tách Toàn Bộ Lời Thoại Gốc (Song Ngữ Anh - Việt)</span>
+            </div>
+            <span class="text-[11px] text-amber-400 font-mono font-medium">Khớp 100% Mạch Tư Duy</span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <!-- Cột Tiếng Anh Gốc -->
+            <div class="bg-black/50 rounded-xl p-3.5 border border-white/5 space-y-2 text-xs text-slate-300">
+              <div class="flex items-center gap-1.5 text-slate-400 font-bold uppercase text-[10px] border-b border-white/5 pb-1.5 font-mono">
+                <span>🇺🇸</span> ORIGINAL ENGLISH
+              </div>
+              <p class="text-[11px] leading-relaxed"><b>Hook:</b> "Yo, a lot of people ask me how I shoot and edit my content, so I'm gonna break down my 5 step process."</p>
+              <p class="text-[11px] leading-relaxed"><b>Step 1 &amp; 2:</b> "I film what I'm already doing... never do something just because it looks good for content. Film yourself anywhere, nobody cares."</p>
+              <p class="text-[11px] leading-relaxed"><b>Step 5 &amp; CTA:</b> "I edit to the voiceover, not the other way around... comment [POST] and I'll send you a quiz that will help you find clarity."</p>
+            </div>
+
+            <!-- Cột Bản Dịch Thực Chiến -->
+            <div class="bg-black/50 rounded-xl p-3.5 border border-amber-500/30 space-y-2 text-xs text-slate-200">
+              <div class="flex items-center gap-1.5 text-amber-400 font-bold uppercase text-[10px] border-b border-amber-500/20 pb-1.5 font-mono">
+                <span>🇻🇳</span> BẢN DỊCH THỰC CHIẾN (VIETNAMESE)
+              </div>
+              <p class="text-[11px] leading-relaxed"><b>Mở đầu:</b> "Nhiều người hỏi mình làm thế nào để quay và dựng video, hôm nay mình bóc tách quy trình 5 bước:"</p>
+              <p class="text-[11px] leading-relaxed"><b>Bước 1 &amp; 2:</b> "Quay lại chính những gì bạn làm hàng ngày. Đừng diễn. Ngại quay nơi đông người là bình thường, nhưng thật ra chẳng ai để ý đâu."</p>
+              <p class="text-[11px] leading-relaxed"><b>Bước 5 &amp; CTA:</b> "Dựng video khớp theo LỜI THOẠI, không làm ngược lại... Bình luận [POST] để nhận bộ công cụ tìm hướng đi nhé!"</p>
+            </div>
           </div>
         </div>
+
+        <!-- BƯỚC 3: TRÍCH XUẤT CÁC CẢNH MẪU THEN CHỐT -->
+        <div class="pb-5 border-b border-white/5">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-blue-500/20 text-[11px] font-mono text-blue-300 font-bold">BƯỚC 3</span>
+              <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Trích Xuất Keyframes &amp; Đánh Giá Chuẩn Đạo Diễn (6 Cảnh Mẫu)</span>
+            </div>
+            <span class="text-[11px] text-slate-400">6 Cảnh tiêu biểu / 39 Cảnh đầy đủ trong PDF</span>
+          </div>
+
+          <!-- Keyframe Carousel/Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3.5 mb-4">
+            
+            <!-- Cảnh 1 -->
+            <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-blue-500/40 transition">
+              <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2 bg-slate-900 border border-white/5 relative">
+                <img src="./assets/video-analysis/shot_01.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_01.jpg'" alt="Cảnh 1" class="w-full h-full object-cover image-hover-zoom">
+                <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-blue-400 font-bold">
+                  CẢNH 01 • 0s - 0.75s
+                </span>
+              </div>
+              <div class="text-xs font-semibold text-white mb-1">Góc Trên Cao &amp; Gạt Tay</div>
+              <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Bắt mắt ngay 1s đầu.</div>
+              <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
+                <b>💡 Cách làm:</b> Đưa tay tương tác camera ngay 3s đầu.
+              </div>
+            </div>
+
+            <!-- Cảnh 2 -->
+            <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-amber-500/40 transition">
+              <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2 bg-slate-900 border border-white/5 relative">
+                <img src="./assets/video-analysis/shot_02.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_02.jpg'" alt="Cảnh 2" class="w-full h-full object-cover image-hover-zoom">
+                <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-amber-400 font-bold">
+                  CẢNH 02 • 0.75s - 2.88s
+                </span>
+              </div>
+              <div class="text-xs font-semibold text-white mb-1">Nhìn Thẳng &amp; Chữ To</div>
+              <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Chữ to đập vào mắt ngay.</div>
+              <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
+                <b>💡 Cách làm:</b> Đặt chữ 1/3 trên để không bị nút Like che.
+              </div>
+            </div>
+
+            <!-- Cảnh 3 -->
+            <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-cyan-500/40 transition">
+              <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2 bg-slate-900 border border-white/5 relative">
+                <img src="./assets/video-analysis/shot_03.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_03.jpg'" alt="Cảnh 3" class="w-full h-full object-cover image-hover-zoom">
+                <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-cyan-400 font-bold">
+                  CẢNH 03 • 2.88s - 4.50s
+                </span>
+              </div>
+              <div class="text-xs font-semibold text-white mb-1">Cận Cảnh Nắm Thanh Tạ</div>
+              <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> B-roll đặc tả chi tiết uy lực.</div>
+              <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
+                <b>💡 Cách làm:</b> Quay lại việc bạn làm hàng ngày thay vì diễn.
+              </div>
+            </div>
+
+            <!-- Cảnh 4 -->
+            <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-purple-500/40 transition">
+              <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2 bg-slate-900 border border-white/5 relative">
+                <img src="./assets/video-analysis/shot_04.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_04.jpg'" alt="Cảnh 4" class="w-full h-full object-cover image-hover-zoom">
+                <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-purple-400 font-bold">
+                  CẢNH 04 • 4.50s - 6.63s
+                </span>
+              </div>
+              <div class="text-xs font-semibold text-white mb-1">Toàn Cảnh Phòng Tập</div>
+              <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Khung xà cân đối chính giữa.</div>
+              <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
+                <b>💡 Cách làm:</b> Đặt camera thẳng trục chính giữa căn phòng.
+              </div>
+            </div>
+
+            <!-- Cảnh 5 -->
+            <div class="bg-black/50 rounded-xl p-3 border border-white/5 hover:border-rose-500/40 transition">
+              <div class="rounded-lg overflow-hidden aspect-[9/16] max-h-48 mb-2 bg-slate-900 border border-white/5 relative">
+                <img src="./assets/video-analysis/shot_05.jpg" onerror="this.src='https://fedu.vn/course/assets/video-analysis/shot_05.jpg'" alt="Cảnh 5" class="w-full h-full object-cover image-hover-zoom">
+                <span class="absolute top-1.5 left-1.5 px-1.5 py-0.5 rounded bg-black/80 text-[9px] font-mono text-rose-400 font-bold">
+                  CẢNH 05 • 6.63s - 7.67s
+                </span>
+              </div>
+              <div class="text-xs font-semibold text-white mb-1">Cắt Cảnh Khớp Tiếng Trống</div>
+              <div class="text-[10px] text-emerald-400 mb-1"><b>✅ Hay:</b> Nhịp chuyển cảnh cuốn hút.</div>
+              <div class="text-[10px] text-slate-400 bg-slate-900/80 p-1.5 rounded border border-white/5">
+                <b>💡 Cách làm:</b> Cắt đổi góc đúng tiếng trống để giữ retention.
+              </div>
+            </div>
+
+            <!-- Thẻ Mở Rộng 33 Cảnh Còn Lại -->
+            <div class="bg-gradient-to-br from-amber-500/10 to-slate-900/90 rounded-xl p-4 border border-amber-500/40 flex flex-col justify-between text-center">
+              <div class="my-auto py-2">
+                <div class="w-10 h-10 rounded-xl bg-amber-500/20 border border-amber-500/40 flex items-center justify-center text-amber-300 text-lg mx-auto mb-2">
+                  <i class="fa-solid fa-book-open"></i>
+                </div>
+                <span class="text-[10px] font-mono font-bold text-amber-400 uppercase tracking-wider block mb-0.5">+33 CẢNH TIẾP THEO</span>
+                <div class="text-xs font-bold text-white mb-1">Trọn Bộ Trong File PDF</div>
+                <div class="text-[10px] text-slate-400">Đầy đủ 39 phân cảnh bóc tách chi tiết.</div>
+              </div>
+              <a href="./assets/video-analysis/demo_director_report.pdf" target="_blank" class="py-2 px-3 rounded-lg bg-gradient-to-r from-amber-500 to-yellow-400 text-black font-bold text-[11px] flex items-center justify-center gap-1 shadow-md active:scale-95 transition">
+                <span>Mở File PDF (39 Trang) ↗</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Bảng 4 Swatches Màu HEX -->
+          <div class="flex items-center justify-between gap-2 p-2.5 rounded-xl bg-black/40 border border-white/5 text-[11px]">
+            <span class="text-slate-400 font-medium flex items-center gap-1.5">
+              <i class="fa-solid fa-palette text-amber-400"></i> Bảng 4 màu chủ đạo trích xuất:
+            </span>
+            <div class="flex items-center gap-2">
+              <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#1e293b] border border-white/20"></span> #1E293B</span>
+              <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#f8fafc] border border-white/20"></span> #F8FAFC</span>
+              <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#f59e0b] border border-white/20"></span> #F59E0B</span>
+              <span class="inline-flex items-center gap-1 font-mono text-[10px] text-slate-300"><span class="w-3 h-3 rounded-full bg-[#06b6d4] border border-white/20"></span> #06B6D4</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- BƯỚC 4: KỊCH BẢN TIẾNG VIỆT ĂN THEO & 3 MẪU CTA -->
+        <div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+            <div class="flex items-center gap-2">
+              <span class="px-2 py-0.5 rounded bg-emerald-500/20 text-[11px] font-mono text-emerald-300 font-bold">BƯỚC 4</span>
+              <span class="text-xs sm:text-sm font-bold text-white uppercase tracking-wide">Kịch Bản Tiếng Việt Làm Lại Khớp Từng Giây &amp; 3 Mẫu CTA</span>
+            </div>
+            <span class="text-[11px] text-emerald-400 font-mono font-medium">Bật Máy Lên Là Quay</span>
+          </div>
+
+          <!-- Timeline Scripts -->
+          <div class="space-y-2 mb-4 text-xs font-normal">
+            <div class="p-2.5 rounded-xl bg-black/40 border border-white/5 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center">
+              <span class="font-mono font-bold text-red-400 shrink-0 text-[11px]">0.0s - 2.8s</span>
+              <div class="text-slate-300">
+                <span class="text-slate-500 text-[10px]">Hook mở màn (Tay gạt che camera → POV trực diện): </span>
+                <span class="text-white">"Đừng bao giờ quay video mà không biết cảnh tiếp theo mình sẽ làm gì... Xem cách mình lên kịch bản 60 giây trong 5 bước."</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-black/40 border border-white/5 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center">
+              <span class="font-mono font-bold text-amber-400 shrink-0 text-[11px]">2.8s - 13.0s</span>
+              <div class="text-slate-300">
+                <span class="text-slate-500 text-[10px]">B-Roll hành động thật (Quay cận bàn tay → Toàn phòng): </span>
+                <span class="text-white">"Bước 1 &amp; 2: Quay lại chính việc bạn làm hàng ngày. Đừng diễn. Một góc toàn định vị không gian và một góc cận tả thực."</span>
+              </div>
+            </div>
+
+            <div class="p-2.5 rounded-xl bg-black/40 border border-white/5 flex flex-col sm:flex-row gap-2 sm:gap-4 items-start sm:items-center">
+              <span class="font-mono font-bold text-cyan-400 shrink-0 text-[11px]">13.0s - 45.2s</span>
+              <div class="text-slate-300">
+                <span class="text-slate-500 text-[10px]">Hậu trường quy trình (Màn hình máy tính → Cắt theo nhịp): </span>
+                <span class="text-white">"Bước 3 &amp; 4: Đưa người xem vào hậu trường làm việc thật. Cắt cảnh đúng vào nhịp nhạc, chữ tiêu đề đặt ở 1/3 trên."</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3 Mẫu CTA -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-2.5 text-xs">
+            <div class="p-3 rounded-xl bg-blue-500/10 border border-blue-500/20">
+              <span class="text-[10px] font-mono font-bold text-blue-400 uppercase block mb-1">MẪU 1 • KÉO COMMENT / LEAD</span>
+              <p class="text-[11px] text-slate-300 italic">"Bình luận [BÓC TÁCH], mình gửi trọn bộ kịch bản chi tiết qua tin nhắn ngay!"</p>
+            </div>
+            <div class="p-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+              <span class="text-[10px] font-mono font-bold text-emerald-400 uppercase block mb-1">MẪU 2 • BÁN KHÓA HỌC / GÓI</span>
+              <p class="text-[11px] text-slate-300 italic">"Bấm vào link bio để nhận ngay bộ 4 trợ lý AI làm video 1-chạm."</p>
+            </div>
+            <div class="p-3 rounded-xl bg-purple-500/10 border border-purple-500/20">
+              <span class="text-[10px] font-mono font-bold text-purple-400 uppercase block mb-1">MẪU 3 • THƯƠNG HIỆU CÁ NHÂN</span>
+              <p class="text-[11px] text-slate-300 italic">"Follow kênh để nhận các video bóc tách cách quay thực chiến mỗi ngày."</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- 4 Highlights Grid -->
