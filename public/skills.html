@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bộ Kỹ Năng AI — Nâng Cấp Bạn Thành Người Có Trợ Lý AI Thực Thi</title>
-  <meta name="description" content="3 kỹ năng AI làm sẵn: Phân tích video, Tạo ảnh theo khuôn mặt, Dựng web bán hàng. Cài 1 lần, dùng trọn đời. Tải về ngay.">
+  <meta name="description" content="3 kỹ năng AI làm sẵn: Phân tích video, Tạo ảnh theo khuôn mặt, Dựng web bán hàng. Cài 1 lần bằng Thẻ QR, dùng trọn đời.">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -28,7 +28,7 @@
     .sh { font-family:'SVN-Integral CF',sans-serif; line-height:1.15; letter-spacing:-0.018em; color:#fff; }
     .card { background:var(--card); border:1px solid var(--border); border-radius:var(--radius); transition:all .3s; }
     .card:hover { border-color:rgba(59,130,246,0.35); box-shadow:0 0 30px rgba(59,130,246,0.1); }
-    .glow-btn { display:inline-flex; align-items:center; gap:10px; padding:18px 44px; border-radius:12px; font-weight:600; font-size:15px; background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#fff; box-shadow:0 4px 25px rgba(37,99,235,0.35); transition:all .25s; text-decoration:none; }
+    .glow-btn { display:inline-flex; align-items:center; gap:10px; padding:18px 44px; border-radius:12px; font-weight:600; font-size:15px; background:linear-gradient(135deg,#2563eb,#1d4ed8); color:#fff; box-shadow:0 4px 25px rgba(37,99,235,0.35); transition:all .25s; text-decoration:none; cursor:pointer; }
     .glow-btn:hover { transform:translateY(-2px); box-shadow:0 8px 30px rgba(37,99,235,0.5); }
     .io-box { display:flex; align-items:stretch; gap:0; border-radius:14px; overflow:hidden; background:#0a0e16; border:1px solid rgba(255,255,255,0.08); }
     .io-in, .io-out { flex:1; padding:20px 24px; }
@@ -47,13 +47,13 @@
 <body class="antialiased">
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- HERO — Ngắn gọn, rõ ý, 1 nút tải -->
+<!-- HERO — Ngắn gọn, rõ ý, 1 nút tải Thẻ QR -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <section class="sec sec--w text-center" style="padding-top:60px; padding-bottom:20px;">
 
   <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold mb-8" style="background:rgba(16,185,129,0.1); border:1px solid rgba(16,185,129,0.3); color:#34d399;">
     <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-    Phiên bản mới nhất • Tự động cập nhật
+    Phiên bản mới nhất • Cài đặt bằng Thẻ QR 1-Shot
   </div>
 
   <h1 class="sh text-3xl sm:text-4xl md:text-[2.8rem] font-bold mb-5 max-w-3xl mx-auto">
@@ -65,21 +65,21 @@
     3 kỹ năng cài vào Agent AI trên máy tính. Bạn ra lệnh bằng tiếng Việt bình thường, AI tự làm thay từ đầu đến cuối.
   </p>
   <p class="fa italic text-sm mb-10" style="color:#64748b;">
-    Không phần mềm lạ. Không cần biết code. Cài 1 lần, dùng trọn đời, tự cập nhật bản mới.
+    Không phần mềm lạ. Không cần biết code. Cài 1 lần bằng Thẻ QR, dùng trọn đời, tự cập nhật bản mới.
   </p>
 
   <div class="flex flex-wrap items-center justify-center gap-4 mb-6">
-    <a href="https://github.com/vietndj/AI-Skill" target="_blank" class="glow-btn">
-      <i class="fa-solid fa-download"></i>
-      Tải Về Miễn Phí
+    <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/the-kich-hoat-ai.png" download="the-kich-hoat-ai.png" class="glow-btn">
+      <i class="fa-solid fa-qrcode"></i>
+      Tải Thẻ Kích Hoạt (Ảnh QR)
     </a>
-    <a href="#xem-ky-nang" class="inline-flex items-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold transition" style="background:#111827; border:1px solid #1f2937; color:#fff;" onmouseover="this.style.background='#1f2937'" onmouseout="this.style.background='#111827'">
-      <i class="fa-solid fa-eye" style="color:#3b82f6;"></i>
-      Xem 3 Kỹ Năng Bên Dưới
+    <a href="#cai-dat-qr" class="inline-flex items-center gap-2 px-6 py-4 rounded-xl text-sm font-semibold transition" style="background:#111827; border:1px solid #1f2937; color:#fff;" onmouseover="this.style.background='#1f2937'" onmouseout="this.style.background='#111827'">
+      <i class="fa-solid fa-circle-play" style="color:#3b82f6;"></i>
+      Xem Hướng Dẫn Cài Đặt
     </a>
   </div>
 
-  <p class="text-xs" style="color:#4b5563;">Mã kích hoạt sẽ nhập bên trong Agent sau khi cài đặt.</p>
+  <p class="text-xs" style="color:#4b5563;">Chỉ cần ném ảnh Thẻ QR vào Agent AI là tự động cài đặt tất cả.</p>
 </section>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -106,7 +106,7 @@
         Gửi link TikTok, Instagram Reels, YouTube Shorts hoặc kéo thả file .mp4 vào khung chat Agent.
       </div>
       <div class="mt-3 px-3 py-2 rounded-lg text-xs font-mono" style="background:#070a11; color:#60a5fa; border:1px solid rgba(255,255,255,0.06);">
-        "Phân tích video này: https://tiktok.com/@abc/video/123"
+        "Phân tích video này: [link_video]"
       </div>
     </div>
     <div class="arrow-sep"><i class="fa-solid fa-arrow-right"></i></div>
@@ -317,51 +317,53 @@
 
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- HƯỚNG DẪN CÀI ĐẶT — 3 bước, rõ ràng -->
+<!-- HƯỚNG DẪN CÀI ĐẶT BẰNG THẺ QR (100% QR - KHÔNG LINK) -->
 <!-- ═══════════════════════════════════════════════════════ -->
-<section class="sec sec--w">
+<section id="cai-dat-qr" class="sec sec--w">
   <div class="card p-6 sm:p-10 relative overflow-hidden" style="border-color:rgba(59,130,246,0.3);">
     <div class="absolute -right-16 -top-16 w-48 h-48 rounded-full blur-3xl pointer-events-none" style="background:rgba(59,130,246,0.1);"></div>
 
     <div class="text-center max-w-2xl mx-auto mb-10">
-      <h2 class="sh text-xl sm:text-2xl font-bold mb-2">CÀI ĐẶT TRONG 2 PHÚT</h2>
-      <p class="text-xs" style="color:#94a3b8;">Tải về, mở Agent, dán 1 câu lệnh. Xong.</p>
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold mb-3" style="background:rgba(59,130,246,0.12); color:#60a5fa; border:1px solid rgba(59,130,246,0.25);">
+        <i class="fa-solid fa-qrcode"></i> CÀI ĐẶT 1-SHOT BẰNG MÃ QR
+      </div>
+      <h2 class="sh text-xl sm:text-2xl font-bold mb-2">CÀI ĐẶT TOÀN BỘ KỸ NĂNG VÀO AGENT</h2>
+      <p class="text-xs" style="color:#94a3b8;">Chỉ cần ném ảnh Thẻ QR vào Agent là xong. Không cần gõ link phức tạp.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+    <!-- 3 Steps Visual -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
       <div class="p-5 rounded-xl text-center" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
         <div class="step-num mx-auto mb-3" style="background:#2563eb; color:#fff;">1</div>
-        <div class="text-sm font-bold text-white mb-1">Mở Agent AI trên máy tính</div>
-        <div class="text-[11px]" style="color:#64748b;">Mở chương trình Agent AI của bạn lên, vào ô nhắn tin (chat).</div>
+        <div class="text-sm font-bold text-white mb-1">Tải ảnh Thẻ QR về máy</div>
+        <div class="text-[11px]" style="color:#64748b;">Bấm nút tải bên dưới để lưu file ảnh Thẻ Kích Hoạt vào máy tính.</div>
       </div>
       <div class="p-5 rounded-xl text-center" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
         <div class="step-num mx-auto mb-3" style="background:#7c3aed; color:#fff;">2</div>
-        <div class="text-sm font-bold text-white mb-1">Dán câu lệnh cài đặt</div>
-        <div class="text-[11px]" style="color:#64748b;">Copy dòng lệnh bên dưới, dán vào chat Agent và nhấn Enter.</div>
+        <div class="text-sm font-bold text-white mb-1">Kéo thả ảnh vào Agent</div>
+        <div class="text-[11px]" style="color:#64748b;">Mở Agent AI lên và kéo thả file ảnh vừa tải vào khung chat.</div>
       </div>
       <div class="p-5 rounded-xl text-center" style="background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);">
         <div class="step-num mx-auto mb-3" style="background:#059669; color:#fff;">3</div>
         <div class="text-sm font-bold text-white mb-1">Nhập mã kích hoạt</div>
-        <div class="text-[11px]" style="color:#64748b;">Agent hỏi mã → nhập mã <code style="color:#6ee7b7;">AI-XXXXXX</code> bạn đã nhận → dùng trọn đời.</div>
+        <div class="text-[11px]" style="color:#64748b;">Agent tự quét QR và hỏi mã → nhập mã <code style="color:#6ee7b7;">AI-XXXXXX</code> để dùng trọn đời.</div>
       </div>
     </div>
 
-    <!-- Copy Command -->
-    <div class="max-w-xl mx-auto">
-      <div class="text-xs font-semibold mb-2 text-center" style="color:#64748b;">
-        <i class="fa-solid fa-terminal mr-1" style="color:#3b82f6;"></i>
-        Câu lệnh cài đặt (copy rồi dán vào chat Agent):
+    <!-- QR CARD PREVIEW & DOWNLOAD BUTTON -->
+    <div class="max-w-2xl mx-auto p-6 rounded-2xl text-center" style="background:#0a0e16; border:1px solid rgba(59,130,246,0.25);">
+      <div class="mb-5 rounded-xl overflow-hidden shadow-2xl border border-blue-500/20 max-w-lg mx-auto">
+        <img src="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/the-kich-hoat-ai.png" alt="Thẻ Kích Hoạt Kỹ Năng AI QR Code" class="w-full h-auto object-cover">
       </div>
-      <div class="flex items-center gap-2">
-        <div id="installCmd" class="flex-1 px-4 py-3 rounded-xl text-xs sm:text-sm font-mono" style="background:#070a11; border:1px solid rgba(255,255,255,0.08); color:#60a5fa; user-select:all;">
-          Cài skills: https://github.com/vietndj/AI-Skill
-        </div>
-        <button onclick="copyInstall()" id="copyBtn" class="px-4 py-3 rounded-xl text-xs font-semibold transition flex items-center gap-1.5 shrink-0" style="background:#2563eb; color:#fff;">
-          <i class="fa-solid fa-copy"></i> Copy
-        </button>
+
+      <div class="flex flex-wrap items-center justify-center gap-3">
+        <a href="https://pub-447bd44dfdac4938912655c855b8631c.r2.dev/images/the-kich-hoat-ai.png" download="the-kich-hoat-ai.png" class="glow-btn">
+          <i class="fa-solid fa-download"></i>
+          Tải Ảnh Thẻ Kích Hoạt (PNG)
+        </a>
       </div>
-      <div id="copyOk" class="text-center text-xs mt-2 font-semibold hidden" style="color:#34d399;">
-        ✓ Đã copy — dán vào chat Agent
+      <div class="text-xs mt-3" style="color:#64748b;">
+        <i class="fa-solid fa-info-circle mr-1"></i> Lưu ảnh về máy tính rồi ném vào khung chat của Agent để bắt đầu cài đặt.
       </div>
     </div>
   </div>
@@ -400,18 +402,5 @@
   <div>Bộ Kỹ Năng AI • Cập nhật liên tục • Chạy trên Google Gemini</div>
 </footer>
 
-<script>
-function copyInstall(){
-  const t = document.getElementById('installCmd').textContent.trim();
-  navigator.clipboard.writeText(t).then(()=>{
-    const b = document.getElementById('copyBtn');
-    const n = document.getElementById('copyOk');
-    b.style.background='#059669';
-    b.innerHTML='<i class="fa-solid fa-check"></i> OK';
-    n.classList.remove('hidden');
-    setTimeout(()=>{ b.style.background='#2563eb'; b.innerHTML='<i class="fa-solid fa-copy"></i> Copy'; n.classList.add('hidden'); },2500);
-  });
-}
-</script>
 </body>
 </html>
